@@ -1,0 +1,3 @@
+{"type":"FeatureCollection", "features": [
+{"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[167.98,-29.02],[167.93,-29],[167.93,-29.07],[167.97,-29.08],[167.98,-29.02]]]},"properties":{"name":"Norfolk Island","iso":"NF","name_local":"","admin":"Norfolk Island","type":"","label_x":167.954,"label_y":-29.033}}
+]}

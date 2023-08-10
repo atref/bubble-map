@@ -1,0 +1,5 @@
+{"type":"FeatureCollection", "features": [
+{"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-62.23,16.75],[-62.19,16.74],[-62.17,16.78],[-62.2,16.82],[-62.23,16.75]]]},"properties":{"name":"Saint Peter","iso":"MS","name_local":"","admin":"Montserrat","type":"Parish","label_x":-62.2017,"label_y":16.7762}},
+{"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-62.15,16.72],[-62.19,16.74],[-62.23,16.75],[-62.22,16.69],[-62.16,16.68],[-62.15,16.72]]]},"properties":{"name":"Saint Anthony","iso":"MS","name_local":"","admin":"Montserrat","type":"Parish","label_x":-62.1886,"label_y":16.7048}},
+{"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-62.17,16.78],[-62.19,16.74],[-62.15,16.72],[-62.17,16.78]]]},"properties":{"name":"Saint Georges","iso":"MS","name_local":"","admin":"Montserrat","type":"Parish","label_x":-62.1671,"label_y":16.7442}}
+]}

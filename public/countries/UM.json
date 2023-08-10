@@ -1,0 +1,10 @@
+{"type":"FeatureCollection", "features": [
+{"type":"Feature","geometry":null,"properties":{"name":"Johnston Atoll","iso":"UM","name_local":"","admin":"United States Minor Outlying Islands","type":"","label_x":-169.538,"label_y":16.7273}},
+{"type":"Feature","geometry":null,"properties":{"name":"Jarvis Island","iso":"UM","name_local":"","admin":"United States Minor Outlying Islands","type":"","label_x":-160.018,"label_y":-0.380268}},
+{"type":"Feature","geometry":null,"properties":{"name":"Baker Island","iso":"UM","name_local":"","admin":"United States Minor Outlying Islands","type":"","label_x":-176.479,"label_y":0.194931}},
+{"type":"Feature","geometry":null,"properties":{"name":"Howland Island","iso":"UM","name_local":"","admin":"United States Minor Outlying Islands","type":"","label_x":-176.638,"label_y":0.80217}},
+{"type":"Feature","geometry":null,"properties":{"name":"Wake Atoll","iso":"UM","name_local":"","admin":"United States Minor Outlying Islands","type":"","label_x":166.643,"label_y":19.2863}},
+{"type":"Feature","geometry":null,"properties":{"name":"Midway Islands","iso":"UM","name_local":"","admin":"United States Minor Outlying Islands","type":"","label_x":-177.376,"label_y":28.206}},
+{"type":"Feature","geometry":null,"properties":{"name":"Navassa Island","iso":"UM","name_local":"","admin":"United States Minor Outlying Islands","type":"","label_x":-75.011,"label_y":18.4043}},
+{"type":"Feature","geometry":null,"properties":{"name":"Palmyra Atoll","iso":"UM","name_local":"","admin":"United States Minor Outlying Islands","type":"","label_x":-162.076,"label_y":5.88359}}
+]}

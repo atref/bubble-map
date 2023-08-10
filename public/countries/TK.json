@@ -1,0 +1,3 @@
+{"type":"FeatureCollection", "features": [
+{"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-172.49,-8.57],[-172.48,-8.59],[-172.5,-8.54],[-172.49,-8.57]]]},"properties":{"name":"Tokelau","iso":"TK","name_local":"","admin":"New Zealand","type":"","label_x":-171.195,"label_y":-9.34449}}
+]}

@@ -1,0 +1,3 @@
+{"type":"FeatureCollection", "features": [
+{"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[144.89,13.64],[144.84,13.63],[144.78,13.52],[144.62,13.43],[144.65,13.4],[144.63,13.35],[144.68,13.25],[144.74,13.25],[144.78,13.42],[144.95,13.59],[144.89,13.64]]]},"properties":{"name":"Guam","iso":"GU","name_local":"","admin":"Guam","type":"","label_x":144.789,"label_y":13.4733}}
+]}

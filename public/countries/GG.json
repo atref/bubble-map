@@ -1,0 +1,3 @@
+{"type":"FeatureCollection", "features": [
+{"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-2.58,49.49],[-2.67,49.43],[-2.53,49.44],[-2.5,49.51],[-2.58,49.49]]]},"properties":{"name":"Sark","iso":"GG","name_local":"","admin":"Guernsey","type":"","label_x":-2.36628,"label_y":49.4309}}
+]}

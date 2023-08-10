@@ -1,0 +1,7 @@
+{"type":"FeatureCollection", "features": [
+{"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-170.69,-14.31],[-170.72,-14.29],[-170.83,-14.32],[-170.75,-14.37],[-170.69,-14.31]]]},"properties":{"name":"Western","iso":"AS","name_local":"","admin":"American Samoa","type":"","label_x":-170.768,"label_y":-14.3241}},
+{"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-170.72,-14.29],[-170.69,-14.31],[-170.57,-14.26],[-170.66,-14.25],[-170.72,-14.29]]]},"properties":{"name":"Eastern","iso":"AS","name_local":"","admin":"American Samoa","type":"","label_x":-170.639,"label_y":-14.272}},
+{"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-169.46,-14.22],[-169.54,-14.24],[-169.5,-14.27],[-169.45,-14.26],[-169.46,-14.22]]]},"properties":{"name":"Manu's","iso":"AS","name_local":"","admin":"American Samoa","type":"","label_x":-169.493,"label_y":-14.2338}},
+{"type":"Feature","geometry":null,"properties":{"name":"Rose Atoll","iso":"AS","name_local":"","admin":"American Samoa","type":"","label_x":-168.166,"label_y":-14.525}},
+{"type":"Feature","geometry":null,"properties":{"name":"Swain's Island","iso":"AS","name_local":"","admin":"American Samoa","type":"","label_x":-171.08,"label_y":-11.0577}}
+]}

@@ -1,0 +1,5 @@
+{"type":"FeatureCollection", "features": [
+{"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-64.56,17.75],[-64.63,17.77],[-64.69,17.74],[-64.77,17.79],[-64.88,17.78],[-64.9,17.68],[-64.56,17.75]]]},"properties":{"name":"Saint Croix","iso":"VI","name_local":"","admin":"United States Virgin Islands","type":"","label_x":-64.7798,"label_y":17.735}},
+{"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-64.7,18.34],[-64.66,18.34],[-64.75,18.37],[-64.8,18.33],[-64.7,18.3],[-64.7,18.34]]]},"properties":{"name":"Saint John","iso":"VI","name_local":"","admin":"United States Virgin Islands","type":"","label_x":-64.7461,"label_y":18.3422}},
+{"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-64.87,18.31],[-64.84,18.32],[-64.95,18.39],[-64.93,18.37],[-65.04,18.35],[-64.87,18.31]]]},"properties":{"name":"Saint Thomas","iso":"VI","name_local":"","admin":"United States Virgin Islands","type":"","label_x":-64.9263,"label_y":18.3543}}
+]}

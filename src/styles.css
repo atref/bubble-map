@@ -1,0 +1,40 @@
+body {
+  font-family: -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+  font-size: 0.875rem;
+}
+
+#root {
+  max-width: 1200px;
+  width: 100%;
+  height: 600px;
+}
+
+#home {
+  position: absolute;
+  left: 20px;
+  top: 20px;;
+}
+
+.wj-flexmap {
+    width: 100%;
+    height: 100%;
+}
+
+.wj-flexmap.wj-label {
+  font-size: small;
+}
+
+.wj-label {
+  pointer-events: none;
+}
+
+.country-label {
+  pointer-events: none;
+  fill: #666;
+  font-size: large;
+}
+
+.tooltip {
+  margin-right: 4px;
+  vertical-align: middle;
+}

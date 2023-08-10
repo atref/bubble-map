@@ -1,0 +1,3 @@
+{"type":"FeatureCollection", "features": [
+{"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[73.74,-53.11],[73.56,-53.02],[73.43,-53.03],[73.4,-52.99],[73.38,-53.02],[73.3,-52.96],[73.24,-52.98],[73.25,-53.02],[73.36,-53.04],[73.47,-53.19],[73.58,-53.19],[73.81,-53.12],[73.74,-53.11]]]},"properties":{"name":"Heard Island and McDonald Islands","iso":"HM","name_local":"","admin":"Heard Island and McDonald Islands","type":"","label_x":73.5247,"label_y":-53.1036}}
+]}

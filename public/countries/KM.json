@@ -1,0 +1,5 @@
+{"type":"FeatureCollection", "features": [
+{"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[43.79,-12.31],[43.64,-12.24],[43.67,-12.35],[43.86,-12.37],[43.79,-12.31]]]},"properties":{"name":"Moûhîlî","iso":"KM","name_local":"","admin":"Comoros","type":"","label_x":43.7462,"label_y":-12.3178}},
+{"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[44.53,-12.23],[44.47,-12.06],[44.41,-12.09],[44.37,-12.18],[44.21,-12.16],[44.39,-12.25],[44.51,-12.38],[44.53,-12.23]]]},"properties":{"name":"Andjouân","iso":"KM","name_local":"","admin":"Comoros","type":"","label_x":44.4518,"label_y":-12.226}},
+{"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[43.47,-11.82],[43.38,-11.61],[43.39,-11.4],[43.36,-11.36],[43.28,-11.38],[43.25,-11.44],[43.22,-11.75],[43.27,-11.83],[43.37,-11.86],[43.44,-11.93],[43.48,-11.92],[43.5,-11.88],[43.47,-11.82]]]},"properties":{"name":"Andjazîdja","iso":"KM","name_local":"","admin":"Comoros","type":"","label_x":43.3378,"label_y":-11.6952}}
+]}

@@ -1,0 +1,5 @@
+{"type":"FeatureCollection", "features": [
+{"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-178.13,-14.31],[-178.13,-14.26],[-178.19,-14.25],[-178.13,-14.31]]]},"properties":{"name":"Sigave","iso":"WF","name_local":"","admin":"Wallis and Futuna","type":"","label_x":-178.161,"label_y":-14.2659}},
+{"type":"Feature","geometry":{"type":"MultiPolygon","coordinates":[[[[-178.13,-14.26],[-178.13,-14.31],[-178.05,-14.32],[-178.13,-14.26]]],[[[-177.98,-14.34],[-178.03,-14.33],[-178.07,-14.36],[-178.02,-14.38],[-177.98,-14.34]]]]},"properties":{"name":"Alo","iso":"WF","name_local":"","admin":"Wallis and Futuna","type":"","label_x":-178.094,"label_y":-14.3029}},
+{"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-176.16,-13.21],[-176.2,-13.29],[-176.16,-13.35],[-176.13,-13.26],[-176.16,-13.21]]]},"properties":{"name":"`Uvea","iso":"WF","name_local":"","admin":"Wallis and Futuna","type":"","label_x":-176.169,"label_y":-13.2768}}
+]}

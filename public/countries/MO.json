@@ -1,0 +1,3 @@
+{"type":"FeatureCollection", "features": [
+{"type":"Feature","geometry":{"type":"MultiPolygon","coordinates":[[[[113.56,22.16],[113.53,22.15],[113.55,22.11],[113.59,22.12],[113.56,22.16]]],[[[113.54,22.22],[113.52,22.17],[113.56,22.2],[113.54,22.22]]]]},"properties":{"name":"Macau","iso":"MO","name_local":"","admin":"Macau S.A.R","type":"","label_x":113.56,"label_y":22.1349}}
+]}

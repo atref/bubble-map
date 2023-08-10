@@ -1,0 +1,3 @@
+{"type":"FeatureCollection", "features": [
+{"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-63.11,18.06],[-63.1,18.04],[-63.02,18.03],[-63.11,18.06]]]},"properties":{"name":"Sint Maarten","iso":"SX","name_local":"","admin":"Sint Maarten","type":"","label_x":-63.0677,"label_y":18.0401}}
+]}

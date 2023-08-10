@@ -1,0 +1,23 @@
+{"type":"FeatureCollection", "features": [
+{"type":"Feature","geometry":{"type":"MultiPolygon","coordinates":[]},"properties":{"name":"Addu","iso":"MV","name_local":"","admin":"Maldives","type":"City","label_x":73.1092,"label_y":-0.624137}},
+{"type":"Feature","geometry":null,"properties":{"name":"Gnaviyani","iso":"MV","name_local":"","admin":"Maldives","type":"Atoll","label_x":73.4348,"label_y":-0.28897}},
+{"type":"Feature","geometry":null,"properties":{"name":"Gaafu Dhaalu","iso":"MV","name_local":"","admin":"Maldives","type":"Atoll","label_x":73.106,"label_y":0.22176}},
+{"type":"Feature","geometry":null,"properties":{"name":"Gaafu Alifu","iso":"MV","name_local":"","admin":"Maldives","type":"Atoll","label_x":73.3741,"label_y":0.764412}},
+{"type":"Feature","geometry":null,"properties":{"name":"Alifu Dhaalu","iso":"MV","name_local":"","admin":"Maldives","type":"Atoll","label_x":72.9528,"label_y":3.77293}},
+{"type":"Feature","geometry":null,"properties":{"name":"Kaafu","iso":"MV","name_local":"","admin":"Maldives","type":"Atoll","label_x":73.6135,"label_y":4.35708}},
+{"type":"Feature","geometry":null,"properties":{"name":"Alifu Alifu","iso":"MV","name_local":"","admin":"Maldives","type":"Atoll","label_x":72.9528,"label_y":4.26451}},
+{"type":"Feature","geometry":null,"properties":{"name":"Baa","iso":"MV","name_local":"","admin":"Maldives","type":"Atoll","label_x":72.9751,"label_y":4.88218}},
+{"type":"Feature","geometry":null,"properties":{"name":"Lhaviyani","iso":"MV","name_local":"","admin":"Maldives","type":"Atoll","label_x":73.5816,"label_y":5.2748}},
+{"type":"Feature","geometry":null,"properties":{"name":"Raa","iso":"MV","name_local":"","admin":"Maldives","type":"Atoll","label_x":72.9751,"label_y":5.80628}},
+{"type":"Feature","geometry":null,"properties":{"name":"Shaviyani","iso":"MV","name_local":"","admin":"Maldives","type":"Atoll","label_x":73.2145,"label_y":6.28509}},
+{"type":"Feature","geometry":null,"properties":{"name":"Laamu","iso":"MV","name_local":"","admin":"Maldives","type":"Atoll","label_x":73.5114,"label_y":1.83216}},
+{"type":"Feature","geometry":null,"properties":{"name":"Thaa","iso":"MV","name_local":"","admin":"Maldives","type":"Atoll","label_x":73.1252,"label_y":2.19286}},
+{"type":"Feature","geometry":null,"properties":{"name":"Dhaalu","iso":"MV","name_local":"","admin":"Maldives","type":"Atoll","label_x":72.9017,"label_y":2.67806}},
+{"type":"Feature","geometry":null,"properties":{"name":"Meemu","iso":"MV","name_local":"","admin":"Maldives","type":"Atoll","label_x":73.5688,"label_y":2.94938}},
+{"type":"Feature","geometry":null,"properties":{"name":"Faafu","iso":"MV","name_local":"","admin":"Maldives","type":"Atoll","label_x":72.8315,"label_y":3.30689}},
+{"type":"Feature","geometry":null,"properties":{"name":"Vaavu","iso":"MV","name_local":"","admin":"Maldives","type":"Atoll","label_x":73.5082,"label_y":3.49522}},
+{"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[73.55,4.24],[73.51,4.19],[73.43,4.18],[73.51,4.16],[73.55,4.24]]]},"properties":{"name":"Malé","iso":"MV","name_local":"","admin":"Maldives","type":"Capital","label_x":73.5188,"label_y":4.17219}},
+{"type":"Feature","geometry":null,"properties":{"name":"Noonu","iso":"MV","name_local":"","admin":"Maldives","type":"Atoll","label_x":73.3837,"label_y":5.78713}},
+{"type":"Feature","geometry":null,"properties":{"name":"Haa Dhaalu","iso":"MV","name_local":"","admin":"Maldives","type":"Atoll","label_x":73.0473,"label_y":6.62205}},
+{"type":"Feature","geometry":null,"properties":{"name":"Haa Alifu","iso":"MV","name_local":"","admin":"Maldives","type":"Atoll","label_x":72.9797,"label_y":7.02774}}
+]}

@@ -1,0 +1,5 @@
+{"type":"FeatureCollection", "features": [
+{"type":"Feature","geometry":{"type":"MultiPolygon","coordinates":[[[[-9.93,-40.35],[-9.96,-40.3],[-10.04,-40.33],[-9.93,-40.4],[-9.9,-40.39],[-9.93,-40.35]]],[[[-12.31,-37.07],[-12.34,-37.1],[-12.28,-37.15],[-12.19,-37.09],[-12.24,-37.06],[-12.31,-37.07]]]]},"properties":{"name":"Tristan da Cunha","iso":"SH","name_local":"","admin":"Saint Helena","type":"","label_x":-12.2667,"label_y":-37.1226}},
+{"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-5.72,-15.91],[-5.79,-15.98],[-5.76,-16.02],[-5.65,-15.96],[-5.67,-15.9],[-5.72,-15.91]]]},"properties":{"name":"Saint Helena","iso":"SH","name_local":"","admin":"Saint Helena","type":"","label_x":-5.70643,"label_y":-15.9317}},
+{"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-14.36,-7.88],[-14.39,-7.89],[-14.41,-7.97],[-14.29,-7.95],[-14.36,-7.88]]]},"properties":{"name":"Ascension","iso":"SH","name_local":"","admin":"Saint Helena","type":"","label_x":-14.3701,"label_y":-7.91916}}
+]}

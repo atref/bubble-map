@@ -1,0 +1,3 @@
+{"type":"FeatureCollection", "features": [
+{"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-4.61,54.06],[-4.39,54.19],[-4.31,54.29],[-4.38,54.35],[-4.37,54.42],[-4.53,54.37],[-4.6,54.28],[-4.71,54.22],[-4.79,54.06],[-4.7,54.08],[-4.61,54.06]]]},"properties":{"name":"Isle of Man","iso":"IM","name_local":"","admin":"Isle of Man","type":"","label_x":-4.53251,"label_y":54.2274}}
+]}
