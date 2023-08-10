@@ -1,7 +1,7 @@
 
 import { Point, Rect, Size } from '@grapecity/wijmo';
 import { IRenderEngine } from '@grapecity/wijmo.chart';
-import { FlexMap, GeoJSON, GeoMapLayer, ScatterMapLayer, _GeoJsonRender } from '@grapecity/wijmo.chart.map';
+import { GeoMapLayer } from '@grapecity/wijmo.chart.map';
 
 export class LabeledLayer extends GeoMapLayer {
   private cacheSize:any = {};
@@ -74,10 +74,11 @@ export class LabeledLayer extends GeoMapLayer {
     if(!rect) 
     {
       rect = super.getGeoBBox(f);
+
+      // manually correct some countries for optimization
       if(f.properties.name === 'Russia') {
         rect.left = 20; rect.width = 160;
       } else if (f.properties.name === 'France') {
-        // 41.2632185	51.268318	-5.4534286	9.8678344
         rect.left = -5.4534286;
         rect.width =  9.8678344 + 5.4534286;
         rect.top = 41.2632185;

@@ -1,6 +1,5 @@
 import { Event, EventArgs, Point, Rect, Size, httpRequest } from '@grapecity/wijmo';
 import { IRenderEngine } from '@grapecity/wijmo.chart';
-import { FlexMap, GeoJSON, GeoMapLayer, ScatterMapLayer, _GeoJsonRender } from '@grapecity/wijmo.chart.map';
 import { LabeledLayer } from './labeled-layer';
 import { intersects } from './tools';
 

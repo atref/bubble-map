@@ -3,7 +3,7 @@ import './styles.css';
 
 import {  Rect, format } from '@grapecity/wijmo';
 import {  Palettes } from '@grapecity/wijmo.chart';
-import { FlexMap, GeoMapLayer, ScatterMapLayer, _GeoJsonRender, ColorScale } from '@grapecity/wijmo.chart.map';
+import { FlexMap, GeoMapLayer, ScatterMapLayer, ColorScale } from '@grapecity/wijmo.chart.map';
 import { LabeledLayer } from './labeled-layer';
 import { DetailLayer } from './detail-layer';
 import { filterCities } from './tools';
@@ -15,15 +15,10 @@ function init() {
   let populationData:any[] = [];
   let homeRect : Rect;
 
-  let citiesLayer = new GeoMapLayer({
+  // load cities data from GeoJSON
+  new GeoMapLayer({
     url: 'data/cities.json',
-    itemsSourceChanged: (layer:any, a:any) => {
-      let features:any[] = layer.getAllFeatures();
-      features.forEach( f=> cities.push( {name:f.properties.name, iso:f.properties.iso,
-        population:f.properties.pop,
-        x:f.geometry.coordinates[0], y:f.geometry.coordinates[1]
-      }) );
-    }
+    itemsSourceChanged: (layer:any, a:any) => cities = getCitiesData(layer)
   });
 
   let countryLayer = new LabeledLayer({
@@ -49,24 +44,17 @@ function init() {
     binding: 'x,y,population',
     symbolMaxSize: 25,
     symbolMinSize: 5,
-    style: { fill: 'rgba(44,162,95,1)', strokeWidth: 0 }
+    style: { fill: 'rgba(44,162,95,1)', strokeWidth: 0 },
+    colorScale: new ColorScale({
+      colors: Palettes.Diverging.RdYlBu,
+      binding: 'population',
+      scale: (v:number) => 1 - v
+    })
   });
-  scatterLayer.colorScale = new ColorScale({
-    colors: Palettes.Diverging.RdYlBu,
-    binding: 'population',
-    scale: (v:number) => 1 - v,
-    format: 'n0"°F"'
-  })
 
   let map = new FlexMap('#map', {
-    tooltip: {
-      content: (ht:any) => tooltip(ht)
-    },
-    layers: [
-      countryLayer,
-      detailLayer,
-      scatterLayer
-    ]
+    tooltip: { content: (ht:any) => tooltip(ht) },
+    layers: [countryLayer, detailLayer, scatterLayer]
   });
 
   // update scatter depending on visible countries
@@ -97,6 +85,20 @@ function tooltip(ht:any) : string {
   }
   
   return tt;
+}
+
+function getCitiesData(layer:GeoMapLayer) : any[] {
+  let data:any[] = [];
+  let features:any[] = layer.getAllFeatures();
+  features.forEach( f=> data.push( 
+    {
+      name:f.properties.name,
+      iso:f.properties.iso,
+      population:f.properties.pop,
+      x:f.geometry.coordinates[0],
+      y:f.geometry.coordinates[1]
+  }));
+  return data;
 }
 
 function getPopulationData(layer:LabeledLayer) : any {
