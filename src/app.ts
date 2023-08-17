@@ -2,18 +2,24 @@ import '@grapecity/wijmo.styles/wijmo.css';
 import './styles.css';
 
 import {  Rect, format } from '@grapecity/wijmo';
+import { ComboBox } from '@grapecity/wijmo.input';
 import {  Palettes } from '@grapecity/wijmo.chart';
 import { FlexMap, GeoMapLayer, ScatterMapLayer, ColorScale } from '@grapecity/wijmo.chart.map';
 import { LabeledLayer } from './labeled-layer';
 import { DetailLayer } from './detail-layer';
 import { filterCities } from './tools';
+import { getContinents } from './continents';
 
 document.readyState === 'complete' ? init() : window.onload = init;
+
+let map:FlexMap;
+let comboContinents:ComboBox;
+let comboCountries:ComboBox;
+let homeRect : Rect;
 
 function init() {
   let cities : any[] = [];
   let populationData:any[] = [];
-  let homeRect : Rect;
 
   // load cities data from GeoJSON
   new GeoMapLayer({
@@ -33,6 +39,8 @@ function init() {
 
       // load population data
       scatterLayer.itemsSource = populationData = getPopulationData(layer);
+
+      createCombos(getCountries(layer));
     },
   });
   countryLayer.labelClass = 'country-label';
@@ -52,7 +60,7 @@ function init() {
     })
   });
 
-  let map = new FlexMap('#map', {
+  map = new FlexMap('#map', {
     tooltip: { content: (ht:any) => tooltip(ht) },
     layers: [countryLayer, detailLayer, scatterLayer]
   });
@@ -71,7 +79,63 @@ function init() {
     }
     detailLayer.itemsSource = null;
     scatterLayer.itemsSource = populationData;
+    comboContinents.selectedItem = null;
   });
+}
+
+function createCombos(countries:any[], homeRect?:Rect) {
+  comboContinents = new ComboBox ('#continents', {
+    displayMemberPath: 'name',
+    itemsSource: getContinents(),
+    isRequired: false,
+    placeholder: 'Continent',
+    selectedItem: null
+  });
+
+  comboContinents.collectionView.currentChanged.addHandler(() => {
+    let rect = homeRect;
+    if(comboContinents.collectionView.currentItem?.bbox) {
+      map.zoom = 1;
+      rect = comboContinents.collectionView.currentItem.bbox;
+    }
+
+    comboCountries.selectedItem = null;
+    comboCountries.collectionView.refresh();
+
+    if(rect) {
+      map.zoom = 1;
+      map.zoomTo(rect);
+    }
+  });
+
+  comboCountries = new ComboBox ('#countries', {
+    displayMemberPath: 'name',
+    isRequired: false,
+    placeholder: 'Country',
+    itemsSource: countries,
+    selectedItem: null
+  });
+
+  comboCountries.collectionView.currentChanged.addHandler(() => {
+    let rect = homeRect;
+    if(comboCountries.collectionView.currentItem?.bbox) {
+      map.zoom = 1;
+      rect = comboCountries.collectionView.currentItem.bbox;
+    }
+
+    if(rect) {
+      map.zoom = 1;
+      map.zoomTo(rect);
+    }
+  });
+
+  comboCountries.collectionView.filter = (country) => {
+    if (comboContinents.collectionView.currentItem) {
+      return country.continent ===  comboContinents.collectionView.currentItem.name;
+    } else {
+      return true;
+    }
+  };
 }
 
 function tooltip(ht:any) : string {
@@ -120,4 +184,25 @@ function getPopulationData(layer:LabeledLayer) : any {
   });
 
   return data;
+}
+
+function getCountries(layer:LabeledLayer) : any {
+  let data:any[] = [];
+  let features = layer.getAllFeatures();
+
+  features.forEach((f: { properties: { name: any; pop_est:number, label_x:number, 
+    label_y:number, iso:string, continent:string }; }) => {
+    if(f.properties.iso === '-99') {
+      console.log(f.properties.name);
+    }
+    
+    data.push({ 
+      name: f.properties.name, 
+      iso: f.properties.iso,
+      continent: f.properties.continent,
+      bbox: layer._getGeoBBoxCached(f)
+    });
+  });
+
+  return data.sort( (c1:any,c2:any) => c1.name.localeCompare(c2.name) );
 }
