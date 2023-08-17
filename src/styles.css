@@ -9,10 +9,19 @@ body {
   height: 600px;
 }
 
+#home {
+  vertical-align: middle;
+  font-size: large;
+}
+
 #options {
   position: absolute;
   left: 20px;
   top: 20px;;
+}
+
+#languages {
+  width: 80px;
 }
 
 .wj-flexmap {

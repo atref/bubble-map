@@ -7,6 +7,8 @@ export class LabeledLayer extends GeoMapLayer {
   private cacheSize:any = {};
   private _labelClass = 'wj-label';
   private _cacheRects:any = {};
+  protected _zoomLimit = 16;
+  protected _formatLabel:Function | undefined = undefined;
 
   constructor( options?:any)  {
     super(options);
@@ -20,8 +22,27 @@ export class LabeledLayer extends GeoMapLayer {
     return this._labelClass;
   }
 
+  set formatLabel(value:Function|undefined) {
+    this._formatLabel = value;
+  }
+
+  get formatLabel():Function | undefined {
+    return this._formatLabel;
+  }
+
+  set zoomLimit(value:number) {
+    this._zoomLimit = value;
+  }
+
+  get zoomLimit():number {
+    return this._zoomLimit;
+  }
+
+
   render(e: IRenderEngine, t: SVGTransform, group: SVGGElement): any {
-    super.render(e, t, group);
+    if(this.map.zoom < this.zoomLimit) {
+      super.render(e, t, group);
+    }
 
     const features = this.getAllFeatures();
     
@@ -37,7 +58,7 @@ export class LabeledLayer extends GeoMapLayer {
       return;
     }
 
-    let name = f.properties.name;
+    let name = this.formatLabel ? this.formatLabel(f) : f.properties.name;
     let x = f.properties.label_x;
     let y = f.properties.label_y;
 
