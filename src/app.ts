@@ -7,7 +7,7 @@ import { Palettes } from '@grapecity/wijmo.chart';
 import { FlexMap, GeoMapLayer, ScatterMapLayer, ColorScale } from '@grapecity/wijmo.chart.map';
 import { LabeledLayer } from './labeled-layer';
 import { DetailLayer } from './detail-layer';
-import { filterCities } from './tools';
+import { filterCities, mouseWheel, getCitiesData, getCountries, getPopulationData } from './tools';
 import { getContinents } from './continents';
 import { getCountryName, getLanguages, setLanguage, getName } from './localization';
 
@@ -87,6 +87,9 @@ function init() {
     scatterLayer.itemsSource = populationData;
     comboContinents.selectedItem = null;
   });
+
+  // override default mouse wheel handler
+  map.hostElement.addEventListener('wheel', (e) => mouseWheel(map, e), true);
 }
 
 function createCombos(countries: any[]) {
@@ -176,62 +179,4 @@ function tooltip(ht: any): string {
   }
 
   return tt;
-}
-
-function getCitiesData(layer: GeoMapLayer): any[] {
-  let data: any[] = [];
-  let features: any[] = layer.getAllFeatures();
-  features.forEach(f => data.push(
-    {
-      name: f.properties.name,
-      iso: f.properties.iso,
-      population: f.properties.pop,
-      x: f.geometry.coordinates[0],
-      y: f.geometry.coordinates[1]
-    }));
-  return data;
-}
-
-function getPopulationData(layer: LabeledLayer): any {
-  let data: any[] = [];
-  let features = layer.getAllFeatures();
-
-  features.forEach((f: { properties: { name: any; pop_est: number, label_x: number, label_y: number, continent:string, iso: string }; }) => {
-    if (f.properties.iso === '-99') {
-      console.log(f.properties.name);
-    }
-
-    data.push({
-      x: f.properties.label_x,
-      y: f.properties.label_y,
-      continent: f.properties.continent,
-      name: f.properties.name,
-      population: f.properties.pop_est,
-      iso: f.properties.iso
-    });
-  });
-
-  return data;
-}
-
-function getCountries(layer: LabeledLayer): any {
-  let data: any[] = [];
-  let features = layer.getAllFeatures();
-
-  features.forEach((f: { properties: { name: any; iso: string, continent: string }; }) => {
-    if (f.properties.iso === '-99') {
-      console.log(f.properties.name);
-    }
-
-    if (f.properties.name) {
-      data.push({
-        name: getCountryName(f.properties.iso, f.properties.name),
-        iso: f.properties.iso,
-        continent: f.properties.continent,
-        bbox: layer._getGeoBBoxCached(f)
-      });
-    }
-  });
-
-  return data.sort((c1: any, c2: any) => c1.name.localeCompare(c2.name));
 }
