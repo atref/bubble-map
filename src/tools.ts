@@ -28,36 +28,17 @@ export function mouseWheel(map:FlexMap, e:WheelEvent ) {
   e.preventDefault();
   map._hideToolTip();
 
-  let mapRect = map._mapRect;
-
   // mouse position
   let point = map.pageToControl(e.pageX, e.pageY);
   let geoPoint = map.convertBack( point);
 
-  // map rectangle in geo coordinates
-  let g1 = map.convertBack( new Point(mapRect.left, mapRect.top));
-  let g2 = map.convertBack( new Point(mapRect.right, mapRect.bottom));
-  let rect = new Rect(g1.x, g2.y, g2.x - g1.x, g1.y - g2.y);
-
-  // relative offset
-  let dx = (geoPoint.x - rect.left) / rect.width;
-  let dy = (geoPoint.y - rect.top) / rect.height;
-
-  let w = rect.width;
-  let h = rect.height;
-
-  // fixed zoom level 
   let delta = -e.deltaY;
   delta = delta > 0 ? 0.1 : -0.1;
+  map.zoom += delta;
+  map.refresh();
+  let geoPoint2 = map.convertBack( point);
 
-  // update rectangle
-  rect.width *= (1 - delta);
-  rect.height *= (1 - delta);
-  rect.left -= dx * (rect.width - w);
-  rect.top -= dy * (rect.height - h);
-
-  map.zoom = 1;
-  map.zoomTo(rect);
+  map.center = new Point(map.center.x - geoPoint2.x + geoPoint.x, map.center.y - geoPoint2.y + geoPoint.y);
   map.refresh();
 }
 
